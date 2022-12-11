@@ -11,5 +11,7 @@ RUN npm run build
 
 #second build phase
 FROM nginx
+# FOR EBS
+EXPOSE 80
 # COPY FROM DIFFERENT PHASE'S some folder into
 COPY --from=builder /app/build /usr/share/nginx/html
